@@ -1,0 +1,12 @@
+<h1>Agregar Ejercicio</h1>
+<%= form_with model: [@training, @exercise], local: true do |form| %>
+  <%= form.label :name, 'Nombre del Ejercicio' %>
+  <%= form.text_field :name %>
+  <%= form.label :sets, 'Número de Series' %>
+  <%= form.number_field :sets %>
+  <%= form.label :reps, 'Número de Repeticiones' %>
+  <%= form.number_field :reps %>
+  <%= form.label :weight, 'Peso (kg)' %>
+  <%= form.number_field :weight %>
+  <%= form.submit 'Añadir' %>
+<% end %>

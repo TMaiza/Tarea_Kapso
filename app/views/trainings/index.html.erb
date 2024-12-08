@@ -1,0 +1,10 @@
+<h1>Entrenamientos</h1>
+<%= link_to 'Agregar nuevo Entrenamiento', new_training_path %>
+<%= link_to 'Ordenar por Volumen Total', trainings_path(order: 'volume'), class: 'btn btn-primary' %>
+<ul>
+  <% @trainings.each do |training| %>
+    <li>
+      <%= link_to training.name, training_path(training) %>
+    </li>
+  <% end %>
+</ul>

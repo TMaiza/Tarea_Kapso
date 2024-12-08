@@ -1,0 +1,6 @@
+<h1>Nuevo Entrenamiento</h1>
+<%= form_with model: @training, local: true do |form| %>
+  <%= form.label :name, 'Nombre del Entrenamiento' %>
+  <%= form.text_field :name %>
+  <%= form.submit 'Guardar' %>
+<% end %>

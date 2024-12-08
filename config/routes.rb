@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  resources :trainings do
+    resources :exercises, only: [:new, :create]
+  end
+  root 'trainings#index'
 end

@@ -1,0 +1,23 @@
+<h1><%= @training.name %></h1>
+
+<h2>Estadísticas</h2>
+<p><strong>Volumen Total Levantado:</strong> <%= @training.volumen_total %> kg</p>
+<p><strong>Peso más alto Levantado:</strong> <%= @training.peso_maximo_levantado %> kg</p>
+<h2>Ejercicios</h2>
+<% if @exercises.any? %>
+  <ul>
+    <% @exercises.each do |exercise| %>
+      <li>
+        <strong><%= exercise.name %></strong>: 
+        <%= exercise.sets %> series de <%= exercise.reps %> reps con <%= exercise.weight %> kg
+        <br>
+        Volumen Total: <%= exercise.volumen_total %> kg
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No hay ejercicios registrados para este entrenamiento.</p>
+<% end %>
+
+<%= link_to 'Agregar Ejercicio', new_training_exercise_path(@training), class: 'btn btn-primary' %>
+<%= link_to 'Volver a Entrenamientos', trainings_path, class: 'btn btn-secondary' %>
