@@ -1,12 +1,6 @@
 # Archivos y directorios de configuración sensibles
 /config/master.key
 
-# Gemas y dependencias
-/vendor/
-
-# Archivos generados por Node.js
-/node_modules/
-
 # Archivos temporales
 /tmp/
 
