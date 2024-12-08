@@ -16,15 +16,9 @@
 # Archivos de assets generados
 /public/assets/
 
-# Bases de datos SQLite locales
-/db/*.sqlite3
-/db/*.sqlite3-journal
 
 # Archivos de configuración de entorno
 .env
-
-# Archivos generados por las pruebas
-/db/test.sqlite3
 
 # Archivos del sistema operativo
 .DS_Store
